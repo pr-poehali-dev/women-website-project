@@ -76,17 +76,16 @@ const Index = () => {
             src="https://cdn.poehali.dev/files/images (2).jpg" 
             alt="Романтика на закате"
             className="w-full h-full object-cover"
-            style={{ filter: 'none' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-pink-50/60 to-white/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/50"></div>
         </div>
         <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <div className="inline-flex items-center gap-2 bg-red-600/90 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
             <Icon name="Heart" size={16} />
             Онлайн-школа для женщин
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">Курсы любовного мастерства</h1>
-          <p className="text-xl text-gray-800 mb-8 font-medium">Станьте единственной и самой желанной для своего мужчины</p>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-2xl">Курсы любовного мастерства</h1>
+          <p className="text-xl text-white mb-8 font-medium drop-shadow-lg">Станьте единственной и самой желанной для своего мужчины</p>
         </div>
       </section>
 
