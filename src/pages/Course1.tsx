@@ -79,21 +79,51 @@ const Course1 = () => {
           </div>
 
           <div className="space-y-12">
-            <section>
-              <h2 className="text-3xl font-bold mb-6">О курсе</h2>
-              <Card>
-                <CardContent className="p-8 space-y-4">
-                  <p className="text-lg">
-                    Этот курс создан специально для женщин, которые хотят наполнить свою интимную жизнь 
-                    новыми красками и подарить своему партнеру незабываемые эмоции.
-                  </p>
-                  <p>
-                    Вы узнаете секреты, которые помогут вам стать более раскрепощенной, уверенной в себе 
-                    и желанной. Курс основан на многолетнем опыте работы с парами и включает практические 
-                    техники, которые можно применять сразу же.
-                  </p>
-                </CardContent>
-              </Card>
+            <section className="bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 p-8 rounded-3xl">
+              <h2 className="text-3xl font-bold mb-6 text-center">Узнайте секреты, о которых мужчины молчат</h2>
+              <div className="max-w-3xl mx-auto space-y-6">
+                <Card className="border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="flex gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Icon name="Lock" size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg mb-2">Что на самом деле заводит мужчину</h3>
+                        <p className="text-muted-foreground">Секретные желания, о которых он никогда не расскажет первым, но которые полностью изменят ваши отношения</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="flex gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Icon name="Flame" size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg mb-2">Как создать атмосферу страсти</h3>
+                        <p className="text-muted-foreground">От подготовки пространства до правильных слов — всё, что превратит обычный вечер в незабываемую ночь</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="flex gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Icon name="Sparkles" size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg mb-2">Техники, проверенные временем</h3>
+                        <p className="text-muted-foreground">Практические методы от сексолога с 15-летним опытом, которые работают в 99% случаев</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </section>
 
             <section>
@@ -176,19 +206,59 @@ const Course1 = () => {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold mb-6">Отзывы</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <h2 className="text-3xl font-bold mb-6 text-center">Этот курс для вас, если:</h2>
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
                 {[
                   {
-                    name: "Анна, 32 года",
-                    text: "Этот курс буквально спас наш брак! Отношения вернулись на новый уровень."
+                    icon: "HeartCrack",
+                    title: "Страсть остыла",
+                    description: "В отношениях нет былой романтики, интимная жизнь стала рутиной"
                   },
                   {
-                    name: "Мария, 28 лет",
-                    text: "Очень практичные советы, которые действительно работают. Рекомендую!"
+                    icon: "UserX",
+                    title: "Нет внимания",
+                    description: "Муж перестал уделять вам время, замечать и ценить"
+                  },
+                  {
+                    icon: "AlertCircle",
+                    title: "Страх потерять",
+                    description: "Боитесь, что он найдёт кого-то другого или уходит"
+                  }
+                ].map((item, index) => (
+                  <Card key={index} className="hover:shadow-xl transition-shadow bg-gradient-to-br from-primary/5 to-secondary/10">
+                    <CardContent className="p-6 space-y-3 text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                        <Icon name={item.icon} size={32} className="text-primary" />
+                      </div>
+                      <h3 className="font-bold text-lg">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold mb-6">Отзывы</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  {
+                    name: "Елена, 35 лет",
+                    city: "Москва",
+                    text: "После 10 лет брака казалось, что всё потеряно. Курс помог вернуть не только страсть, но и уважение друг к другу!"
+                  },
+                  {
+                    name: "Анна, 28 лет",
+                    city: "Санкт-Петербург",
+                    text: "Я была очень зажатой и комплексовала. Теперь чувствую себя женщиной, а муж буквально счастлив!"
+                  },
+                  {
+                    name: "Мария, 42 года",
+                    city: "Краснодар",
+                    text: "Думала, в моём возрасте уже поздно что-то менять. Ошибалась! Мы с мужем как будто заново влюбились."
                   }
                 ].map((review, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="hover:shadow-xl transition-shadow">
                     <CardContent className="p-6 space-y-3">
                       <div className="flex items-center gap-1 mb-2">
                         {[1, 2, 3, 4, 5].map((star) => (
@@ -196,7 +266,10 @@ const Course1 = () => {
                         ))}
                       </div>
                       <p className="text-muted-foreground italic">"{review.text}"</p>
-                      <p className="font-semibold">{review.name}</p>
+                      <div>
+                        <p className="font-semibold">{review.name}</p>
+                        <p className="text-sm text-muted-foreground">{review.city}</p>
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
