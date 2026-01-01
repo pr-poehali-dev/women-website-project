@@ -70,7 +70,7 @@ const Index = () => {
         </div>
       </nav>
 
-      <section className="relative py-24 px-4 overflow-hidden">
+      <section className="relative py-16 px-4 overflow-hidden min-h-[400px]">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/f083f53e-9bdf-4707-9536-4f636c30ab87.jpg" 
