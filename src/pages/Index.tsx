@@ -76,8 +76,9 @@ const Index = () => {
             src="https://cdn.poehali.dev/files/images (2).jpg" 
             alt="Романтика на закате"
             className="w-full h-full object-cover"
+            style={{ filter: 'none' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-pink-50/70 to-white/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-pink-50/60 to-white/80"></div>
         </div>
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <div className="inline-flex items-center gap-2 bg-red-600/90 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
@@ -100,6 +101,7 @@ const Index = () => {
                     src={course.image} 
                     alt={course.title}
                     className="absolute inset-0 w-full h-full object-cover"
+                    style={{ filter: 'blur(2px)' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   <div className="absolute top-4 left-4">
