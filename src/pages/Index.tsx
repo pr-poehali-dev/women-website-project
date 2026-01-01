@@ -46,7 +46,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
+      image: "https://cdn.poehali.dev/files/yurii2190_Create_an_image_of_a_beautiful_woman_35-40_years_old__8c99a742-e1a5-4cb9-b11e-8a5ef6df813c.png"
     }
   ];
 
