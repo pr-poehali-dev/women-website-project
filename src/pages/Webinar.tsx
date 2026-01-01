@@ -196,6 +196,7 @@ const Webinar = () => {
           </div>
         </div>
       </div>
+      </div>
     </Layout>
   );
 };
