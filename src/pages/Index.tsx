@@ -101,9 +101,8 @@ const Index = () => {
                     src={course.image} 
                     alt={course.title}
                     className="absolute inset-0 w-full h-full object-cover"
-                    style={{ filter: 'blur(2px)' }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/30 to-transparent"></div>
                   <div className="absolute top-4 left-4">
                     <div className={`inline-flex items-center gap-2 ${course.color} text-white px-3 py-1 rounded-full text-xs font-semibold ${course.badge === "ПРЯМОЙ ЭФИР" ? "animate-pulse" : ""}`}>
                       {course.badge === "ПРЯМОЙ ЭФИР" && <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>}
