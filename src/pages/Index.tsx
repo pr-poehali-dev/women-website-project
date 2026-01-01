@@ -9,19 +9,6 @@ const Index = () => {
   const courses = [
     {
       id: 1,
-      title: "3 секрета от LOVE-коуча",
-      subtitle: "ДЛЯ ТЕХ, КТО ХОЧЕТ БЫТЬ В ЦЕНТРЕ ВНИМАНИЯ",
-      description: "Вам не хватает внимания и страсти? Узнайте, как стать желанной каждый день, чтобы он думал только о вас",
-      pain: "Чувствую себя незаметной",
-      badge: "ПРЯМОЙ ЭФИР",
-      times: ["12:00 МСК", "17:00 МСК"],
-      bonus: "«5 фишек, чтобы всегда быть самой желанной»",
-      link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
-      color: "bg-red-600",
-      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
-    },
-    {
-      id: 2,
       title: "Как за 2 часа зарядить⚡ свои отношения",
       subtitle: "КОГДА ЧУВСТВУЕТЕ, ЧТО ОГОНЬ УГАСАЕТ",
       description: "Отношения стали скучными и предсказуемыми? Верните яркость и страсть без манипуляций и игр",
@@ -35,7 +22,7 @@ const Index = () => {
       image: "https://cdn.poehali.dev/files/yurii2190_add_more_passion_--ar_34_--sref_httpss.mj.runcwlcl7_daa21c91-7f86-4f29-8f91-5a88044ff303_3.png"
     },
     {
-      id: 3,
+      id: 2,
       title: "Как стать единственной для него",
       subtitle: "ЧТОБЫ ОН НИКОГДА НЕ СМОТРЕЛ НА ДРУГИХ",
       description: "Переживаете, что можете быть не той самой? Узнайте секреты, как стать незаменимой и особенной",
@@ -47,6 +34,19 @@ const Index = () => {
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
       color: "bg-gradient-to-r from-red-700 to-red-600",
       image: "https://cdn.poehali.dev/files/yurii2190_Create_an_image_of_a_beautiful_woman_35-40_years_old__8c99a742-e1a5-4cb9-b11e-8a5ef6df813c.png"
+    },
+    {
+      id: 3,
+      title: "3 секрета от LOVE-коуча",
+      subtitle: "ДЛЯ ТЕХ, КТО ХОЧЕТ БЫТЬ В ЦЕНТРЕ ВНИМАНИЯ",
+      description: "Вам не хватает внимания и страсти? Узнайте, как стать желанной каждый день, чтобы он думал только о вас",
+      pain: "Чувствую себя незаметной",
+      badge: "ПРЯМОЙ ЭФИР",
+      times: ["12:00 МСК", "17:00 МСК"],
+      bonus: "«5 фишек, чтобы всегда быть самой желанной»",
+      link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
+      color: "bg-red-600",
+      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
     }
   ];
 
