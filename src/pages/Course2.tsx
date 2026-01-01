@@ -287,7 +287,7 @@ const Course2 = () => {
           </section>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 

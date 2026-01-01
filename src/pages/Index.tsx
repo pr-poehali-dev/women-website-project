@@ -26,7 +26,7 @@ const Index = () => {
       category: "Курсы",
       duration: "5 модулей",
       format: "Видеоуроки",
-      link: externalLink
+      link: "/course-1"
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ const Index = () => {
       category: "Онлайн-уроки",
       duration: "2 часа",
       format: "Прямой эфир",
-      link: externalLink
+      link: "/course-2"
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const Index = () => {
       category: "Вебинары",
       duration: "2 часа",
       format: "Прямой эфир",
-      link: externalLink
+      link: "/webinar"
     },
     {
       id: 4,
@@ -71,7 +71,7 @@ const Index = () => {
       category: "Курсы",
       duration: "8 модулей",
       format: "Видео + практика",
-      link: externalLink
+      link: "/course-1"
     }
   ];
 
@@ -181,7 +181,7 @@ const Index = () => {
               <Card
                 key={course.id}
                 className="group hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden"
-                onClick={() => window.open(course.link, '_blank')}
+                onClick={() => navigate(course.link)}
               >
                 <div className="relative overflow-hidden h-56">
                   <img
@@ -233,10 +233,10 @@ const Index = () => {
                       className="w-full group-hover:shadow-lg transition-all"
                       onClick={(e) => {
                         e.stopPropagation();
-                        window.open(course.link, '_blank');
+                        navigate(course.link);
                       }}
                     >
-                      Записаться
+                      Подробнее
                       <Icon name="ArrowRight" size={20} className="ml-2" />
                     </Button>
                   </div>
@@ -373,9 +373,9 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Курсы</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Незабываемые ночи</a></li>
-                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Огонь и страсть</a></li>
-                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Вебинары</a></li>
+                <li><button onClick={() => navigate('/course-1')} className="hover:text-white transition-colors">Незабываемые ночи</button></li>
+                <li><button onClick={() => navigate('/course-2')} className="hover:text-white transition-colors">Огонь и страсть</button></li>
+                <li><button onClick={() => navigate('/webinar')} className="hover:text-white transition-colors">Вебинар</button></li>
               </ul>
             </div>
 
