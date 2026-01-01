@@ -18,7 +18,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
       color: "bg-red-600",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/ef40f912-2e82-4b02-9e79-0c264bb33266.jpg"
+      image: "https://cdn.poehali.dev/files/Снимок экрана 2026-01-01 220301.png"
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed2?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277103&utm_content=salid&erid=2VtzqvSDYkA",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/41b959ab-b15d-4376-bf8b-a91c157ffded.jpg"
+      image: "https://cdn.poehali.dev/files/Снимок экрана 2026-01-01 220242.png"
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/a792fc17-e4bb-4711-a8ac-8f915ec226d4.jpg"
+      image: "https://cdn.poehali.dev/files/Снимок экрана 2026-01-01 220225.png"
     }
   ];
 
@@ -157,7 +157,7 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <div className="font-bold text-lg mb-2">PRIVATE COLLEGE</div>
           <p className="text-sm text-gray-400">Школа любовного мастерства для женщин</p>
-          <p className="text-sm text-gray-400 mt-4">ИП Минятюк Алёна Геннадьевна • ОГРН 321435000047548</p>
+          <p className="text-sm text-gray-400 mt-4">ИП Микитюк Алёна Геннадьевна • ОГРН 321435000047548</p>
         </div>
       </footer>
     </div>
