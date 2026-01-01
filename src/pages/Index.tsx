@@ -73,10 +73,9 @@ const Index = () => {
       <section className="relative px-4 overflow-hidden h-[500px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/f083f53e-9bdf-4707-9536-4f636c30ab87.jpg" 
+            src="https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/0955d9cd-9a17-4c79-a60d-f0c3ff58b1cf.jpg" 
             alt="Романтика на закате"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: '50% 35%' }}
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/50"></div>
         </div>
