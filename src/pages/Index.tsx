@@ -18,7 +18,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
       color: "bg-red-600",
-      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
+      image: "https://cdn.poehali.dev/files/yurii2190_Create_an_image_of_a_beautiful_woman_35-40_years_old__8c99a742-e1a5-4cb9-b11e-8a5ef6df813c.png"
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed2?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277103&utm_content=salid&erid=2VtzqvSDYkA",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/files/yurii2190_add_more_passion_--ar_34_--sref_httpss.mj.runcwlcl7_daa21c91-7f86-4f29-8f91-5a88044ff303_3.png"
+      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/files/yurii2190_Create_an_image_of_a_beautiful_woman_35-40_years_old__8c99a742-e1a5-4cb9-b11e-8a5ef6df813c.png"
+      image: "https://cdn.poehali.dev/files/yurii2190_add_more_passion_--ar_34_--sref_httpss.mj.runcwlcl7_daa21c91-7f86-4f29-8f91-5a88044ff303_3.png"
     }
   ];
 
@@ -73,7 +73,7 @@ const Index = () => {
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://cdn.poehali.dev/files/images (2).jpg" 
+            src="https://cdn.poehali.dev/files/Снимок экрана 2026-01-01 223643.png" 
             alt="Романтика на закате"
             className="w-full h-full object-cover"
           />
