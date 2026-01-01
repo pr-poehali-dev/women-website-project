@@ -102,7 +102,7 @@ const Index = () => {
                     alt={course.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-white/20"></div>
                   <div className="absolute top-4 left-4">
                     <div className={`inline-flex items-center gap-2 ${course.color} text-white px-3 py-1 rounded-full text-xs font-semibold ${course.badge === "ПРЯМОЙ ЭФИР" ? "animate-pulse" : ""}`}>
                       {course.badge === "ПРЯМОЙ ЭФИР" && <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>}
