@@ -10,6 +10,8 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Все курсы");
 
+  const externalLink = "https://info-hit.ru/company-private-college/?erid=2VtzqvJocLS&pid=314945&pcid=5983311&pct=U";
+
   const courses = [
     {
       id: 1,
@@ -24,7 +26,7 @@ const Index = () => {
       category: "Курсы",
       duration: "5 модулей",
       format: "Видеоуроки",
-      link: "/course-1"
+      link: externalLink
     },
     {
       id: 2,
@@ -39,7 +41,7 @@ const Index = () => {
       category: "Онлайн-уроки",
       duration: "2 часа",
       format: "Прямой эфир",
-      link: "/course-2"
+      link: externalLink
     },
     {
       id: 3,
@@ -54,7 +56,7 @@ const Index = () => {
       category: "Вебинары",
       duration: "2 часа",
       format: "Прямой эфир",
-      link: "/webinar"
+      link: externalLink
     },
     {
       id: 4,
@@ -69,7 +71,7 @@ const Index = () => {
       category: "Курсы",
       duration: "8 модулей",
       format: "Видео + практика",
-      link: "/course-1"
+      link: externalLink
     }
   ];
 
@@ -99,7 +101,7 @@ const Index = () => {
               <a href="#courses" className="text-sm hover:text-primary transition-colors">Курсы</a>
               <a href="#about" className="text-sm hover:text-primary transition-colors">О школе</a>
               <a href="#reviews" className="text-sm hover:text-primary transition-colors">Отзывы</a>
-              <Button size="sm">Консультация</Button>
+              <Button size="sm" onClick={() => window.open(externalLink, '_blank')}>Консультация</Button>
             </div>
 
             <button className="md:hidden">
@@ -179,7 +181,7 @@ const Index = () => {
               <Card
                 key={course.id}
                 className="group hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden"
-                onClick={() => navigate(course.link)}
+                onClick={() => window.open(course.link, '_blank')}
               >
                 <div className="relative overflow-hidden h-56">
                   <img
@@ -227,7 +229,13 @@ const Index = () => {
                       <span className="text-2xl font-bold text-primary">{course.price}</span>
                       <span className="text-lg text-gray-400 line-through">{course.oldPrice}</span>
                     </div>
-                    <Button className="w-full group-hover:shadow-lg transition-all">
+                    <Button 
+                      className="w-full group-hover:shadow-lg transition-all"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(course.link, '_blank');
+                      }}
+                    >
                       Записаться
                       <Icon name="ArrowRight" size={20} className="ml-2" />
                     </Button>
@@ -342,7 +350,12 @@ const Index = () => {
               placeholder="Ваш email"
               className="h-12 bg-white"
             />
-            <Button size="lg" variant="secondary" className="whitespace-nowrap">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="whitespace-nowrap"
+              onClick={() => window.open(externalLink, '_blank')}
+            >
               Получить консультацию
             </Button>
           </div>
@@ -360,18 +373,18 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Курсы</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Незабываемые ночи</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Огонь и страсть</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Вебинары</a></li>
+                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Незабываемые ночи</a></li>
+                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Огонь и страсть</a></li>
+                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Вебинары</a></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-semibold mb-4">О нас</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">О школе</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Преподаватели</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Отзывы</a></li>
+                <li><a href="#about" className="hover:text-white transition-colors">О школе</a></li>
+                <li><a href={externalLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Преподаватели</a></li>
+                <li><a href="#reviews" className="hover:text-white transition-colors">Отзывы</a></li>
               </ul>
             </div>
 
