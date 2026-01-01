@@ -24,9 +24,6 @@ const Webinar = () => {
   return (
     <Layout>
       <div className="bg-gradient-to-b from-background to-secondary/20">
-          </button>
-        </div>
-      </nav>
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -199,7 +196,7 @@ const Webinar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
