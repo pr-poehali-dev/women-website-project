@@ -18,7 +18,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
       color: "bg-red-600",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/d0cecca2-fce9-4776-aed7-22683e6b5ddc.jpg"
+      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed2?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277103&utm_content=salid&erid=2VtzqvSDYkA",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/61ec5388-440b-4d7c-a62b-7b5b56b6cdf2.jpg"
+      image: "https://cdn.poehali.dev/files/yurii2190_add_more_passion_--ar_34_--sref_httpss.mj.runcwlcl7_daa21c91-7f86-4f29-8f91-5a88044ff303_3.png"
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ const Index = () => {
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
       color: "bg-gradient-to-r from-red-700 to-red-600",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/e32ad4a8-c4ab-48e4-9f7c-1c5ad9007790.jpg"
+      image: "https://cdn.poehali.dev/files/yurii2190_they_should_look_at_each_other_with_admiration_e1e08ffd-7672-4b1b-b6dc-fee389dc3f37_3.png"
     }
   ];
 
