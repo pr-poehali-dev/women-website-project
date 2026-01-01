@@ -70,14 +70,22 @@ const Index = () => {
         </div>
       </nav>
 
-      <section className="py-16 px-4 bg-gradient-to-br from-red-50/50 via-pink-50/30 to-white">
-        <div className="container mx-auto text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-red-600/10 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+      <section className="relative py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://cdn.poehali.dev/files/images (2).jpg" 
+            alt="Романтика на закате"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-pink-50/70 to-white/90"></div>
+        </div>
+        <div className="container mx-auto text-center max-w-4xl relative z-10">
+          <div className="inline-flex items-center gap-2 bg-red-600/90 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
             <Icon name="Heart" size={16} />
             Онлайн-школа для женщин
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">Курсы любовного мастерства</h1>
-          <p className="text-xl text-gray-700 mb-8">Станьте единственной и самой желанной для своего мужчины</p>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">Курсы любовного мастерства</h1>
+          <p className="text-xl text-gray-800 mb-8 font-medium">Станьте единственной и самой желанной для своего мужчины</p>
         </div>
       </section>
 
