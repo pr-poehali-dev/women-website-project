@@ -15,7 +15,7 @@ const Index = () => {
       badge: "ПРЯМОЙ ЭФИР",
       times: ["12:00 МСК", "17:00 МСК"],
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
-      link: "/webinar",
+      link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
       color: "bg-red-600"
     },
     {
@@ -27,7 +27,7 @@ const Index = () => {
       price: "БЕСПЛАТНО",
       oldPrice: "3 000 ₽",
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
-      link: "/course-passion",
+      link: "https://femalecollege.site/vlm/eva/anatomia/longreed2?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277103&utm_content=salid&erid=2VtzqvSDYkA",
       color: "bg-gradient-to-r from-red-700 to-red-600"
     },
     {
@@ -39,7 +39,7 @@ const Index = () => {
       price: "БЕСПЛАТНО",
       oldPrice: "3 000 ₽",
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
-      link: "/course-secrets",
+      link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
       color: "bg-gradient-to-r from-red-700 to-red-600"
     }
   ];
@@ -80,7 +80,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12">Выберите свой курс</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {courses.map((course) => (
-              <Card key={course.id} className="group hover:shadow-2xl transition-all cursor-pointer" onClick={() => navigate(course.link)}>
+              <Card key={course.id} className="group hover:shadow-2xl transition-all cursor-pointer" onClick={() => window.open(course.link, '_blank')}>
                 <div className="relative h-64 bg-gradient-to-br from-red-100 via-pink-100 to-red-50">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Icon name="Heart" size={80} className="text-red-200 opacity-50" />
@@ -122,8 +122,14 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-red-700 to-red-600 hover:from-red-800 hover:to-red-700">
-                    Подробнее <Icon name="ArrowRight" size={20} className="ml-2" />
+                  <Button 
+                    className="w-full bg-gradient-to-r from-red-700 to-red-600 hover:from-red-800 hover:to-red-700"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(course.link, '_blank');
+                    }}
+                  >
+                    Записаться <Icon name="ArrowRight" size={20} className="ml-2" />
                   </Button>
                 </CardContent>
               </Card>
