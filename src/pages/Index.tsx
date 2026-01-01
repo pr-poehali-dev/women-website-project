@@ -17,7 +17,8 @@ const Index = () => {
       times: ["12:00 МСК", "17:00 МСК"],
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/land1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277090&utm_content=salid&erid=2VtzqvCsfD4",
-      color: "bg-red-600"
+      color: "bg-red-600",
+      image: "https://disk.yandex.ru/i/t7xJXTLVYlkiGA"
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ const Index = () => {
       oldPrice: "3 000 ₽",
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed2?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277103&utm_content=salid&erid=2VtzqvSDYkA",
-      color: "bg-gradient-to-r from-red-700 to-red-600"
+      color: "bg-gradient-to-r from-red-700 to-red-600",
+      image: "https://disk.yandex.ru/i/mWm4wEUb5m-OVg"
     },
     {
       id: 3,
@@ -43,7 +45,8 @@ const Index = () => {
       oldPrice: "3 000 ₽",
       bonus: "«5 фишек, чтобы всегда быть самой желанной»",
       link: "https://femalecollege.site/vlm/eva/anatomia/longreed1?gcpc=fe762&utm_source=salid&utm_medium=offer15658&utm_campaign=wm182581&utm_term=156581825811767277094&utm_content=salid&erid=2VtzqvHKd46",
-      color: "bg-gradient-to-r from-red-700 to-red-600"
+      color: "bg-gradient-to-r from-red-700 to-red-600",
+      image: "https://disk.yandex.ru/i/K5bUfZ9yT_1U3A"
     }
   ];
 
@@ -83,11 +86,14 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12">Выберите свой курс</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {courses.map((course) => (
-              <Card key={course.id} className="group hover:shadow-2xl transition-all cursor-pointer" onClick={() => window.open(course.link, '_blank')}>
+              <Card key={course.id} className="group hover:shadow-2xl transition-all cursor-pointer overflow-hidden" onClick={() => window.open(course.link, '_blank')}>
                 <div className="relative h-64 bg-gradient-to-br from-red-100 via-pink-100 to-red-50">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Icon name="Heart" size={80} className="text-red-200 opacity-50" />
-                  </div>
+                  <img 
+                    src={course.image} 
+                    alt={course.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   <div className="absolute top-4 left-4">
                     <div className={`inline-flex items-center gap-2 ${course.color} text-white px-3 py-1 rounded-full text-xs font-semibold ${course.badge === "ПРЯМОЙ ЭФИР" ? "animate-pulse" : ""}`}>
                       {course.badge === "ПРЯМОЙ ЭФИР" && <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>}
