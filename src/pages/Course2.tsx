@@ -13,8 +13,8 @@ const Course2 = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-secondary/10 to-background">
       <nav className="py-4 px-4 border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
-          <button onClick={() => navigate("/")} className="text-xl font-bold text-primary">
-            Female College
+          <button onClick={() => navigate("/")} className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Private College" className="h-10" />
           </button>
           <div className="flex gap-4">
             <Button variant="ghost" onClick={() => navigate("/webinar")}>Вебинар</Button>

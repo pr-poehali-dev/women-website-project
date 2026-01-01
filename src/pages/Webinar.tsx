@@ -19,8 +19,8 @@ const Webinar = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
       <nav className="py-4 px-4 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
-          <button onClick={() => navigate("/")} className="text-xl font-bold text-primary">
-            Female College
+          <button onClick={() => navigate("/")} className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Private College" className="h-10" />
           </button>
         </div>
       </nav>

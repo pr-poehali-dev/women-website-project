@@ -72,22 +72,22 @@ const Index = () => {
 
   const blogPosts = [
     {
-      title: "5 шагов к уверенности в себе",
-      category: "Саморазвитие",
-      date: "15 декабря 2024",
-      excerpt: "Практические техники для укрепления внутренней силы и веры в себя"
+      title: "Как вернуть страсть в отношения",
+      category: "Отношения",
+      date: "20 декабря 2024",
+      excerpt: "Проверенные техники для возрождения романтики и близости"
     },
     {
-      title: "Как найти своё предназначение",
-      category: "Карьера",
-      date: "10 декабря 2024",
-      excerpt: "Методика поиска дела, которое приносит радость и доход"
-    },
-    {
-      title: "Преодоление страха перед изменениями",
+      title: "Психология мужского желания",
       category: "Психология",
-      date: "5 декабря 2024",
-      excerpt: "Почему мы боимся перемен и как с этим работать"
+      date: "15 декабря 2024",
+      excerpt: "Что на самом деле хотят мужчины, но не говорят об этом"
+    },
+    {
+      title: "5 типичных женских ошибок",
+      category: "Саморазвитие",
+      date: "10 декабря 2024",
+      excerpt: "Какие действия разрушают даже самые крепкие отношения"
     }
   ];
 
@@ -96,7 +96,9 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-primary">Женский Коучинг</h1>
+            <div className="flex items-center gap-3">
+              <img src="/logo.svg" alt="Private College" className="h-10" />
+            </div>
             <div className="hidden md:flex gap-6">
               {["home", "portfolio", "blog", "services", "about", "contact"].map((section) => (
                 <button

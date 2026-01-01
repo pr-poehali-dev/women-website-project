@@ -11,8 +11,8 @@ const Course1 = () => {
     <div className="min-h-screen">
       <nav className="py-4 px-4 border-b border-border bg-background sticky top-0 z-50 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
-          <button onClick={() => navigate("/")} className="text-xl font-bold text-primary">
-            Female College
+          <button onClick={() => navigate("/")} className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Private College" className="h-10" />
           </button>
           <Button onClick={() => navigate("/webinar")}>Вебинар</Button>
         </div>
