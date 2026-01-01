@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (sectionId: string) => {
@@ -15,22 +17,25 @@ const Index = () => {
 
   const portfolioItems = [
     {
-      title: "Карьерная трансформация",
-      description: "История смены профессии с нуля до руководителя",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/a4553f73-67ba-49d0-be40-d8c23809f5f0.jpg",
-      result: "Рост дохода на 300%"
+      title: "Незабываемые ночи любви",
+      description: "Секреты создания страсти в отношениях",
+      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/0b2c7ffa-c35f-4ceb-a5b3-9f34ef08ffdc.jpg",
+      result: "500+ счастливых пар",
+      link: "/course-1"
     },
     {
-      title: "Баланс жизни и карьеры",
-      description: "Путь к гармонии между семьей и бизнесом",
+      title: "Огонь и страсть за 2 часа",
+      description: "Как вернуть яркость в отношения",
+      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/9153978a-d7bb-4d55-95ae-3c8615c0da1c.jpg",
+      result: "Бесплатный онлайн-урок",
+      link: "/course-2"
+    },
+    {
+      title: "3 секрета от LOVE-коуча",
+      description: "О ярких любовных отношениях",
       image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/ff51155b-661c-4567-855b-531899242f4b.jpg",
-      result: "Счастливая семья + успешный проект"
-    },
-    {
-      title: "Лидерство нового уровня",
-      description: "От сотрудника до CEO за 2 года",
-      image: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/e35db85c-2e3a-442f-8eb9-c313393109b7.jpg",
-      result: "Команда из 50 человек"
+      result: "Живой вебинар",
+      link: "/webinar"
     }
   ];
 
@@ -157,12 +162,16 @@ const Index = () => {
       <section id="portfolio" className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Истории успеха</h2>
-            <p className="text-muted-foreground text-lg">Реальные результаты наших клиенток</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши курсы</h2>
+            <p className="text-muted-foreground text-lg">Выберите программу для себя</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow animate-fade-in group">
+              <Card 
+                key={index} 
+                className="overflow-hidden hover:shadow-xl transition-shadow animate-fade-in group cursor-pointer"
+                onClick={() => navigate(item.link)}
+              >
                 <div className="relative overflow-hidden">
                   <img
                     src={item.image}
@@ -175,7 +184,10 @@ const Index = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <p className="text-muted-foreground mb-3">{item.description}</p>
+                  <Button variant="link" className="p-0 text-primary">
+                    Узнать подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
