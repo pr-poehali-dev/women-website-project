@@ -3,9 +3,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Icon from "@/components/ui/icon";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Course1 = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    setTimeout(() => setIsSubmitted(false), 3000);
+  };
 
   return (
     <div className="min-h-screen">
@@ -63,7 +72,13 @@ const Course1 = () => {
                 <p className="text-sm text-muted-foreground">Ограниченное предложение</p>
               </div>
 
-              <Button size="lg" className="w-full">
+              <Button 
+                size="lg" 
+                className="w-full"
+                onClick={() => {
+                  document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Получить доступ
                 <Icon name="ArrowRight" size={20} className="ml-2" />
               </Button>
@@ -189,19 +204,38 @@ const Course1 = () => {
               </div>
             </section>
 
-            <section className="bg-secondary/30 p-8 rounded-3xl">
+            <section id="registration-form" className="bg-secondary/30 p-8 rounded-3xl">
               <div className="max-w-2xl mx-auto text-center space-y-6">
                 <h2 className="text-3xl font-bold">Начните прямо сейчас</h2>
                 <p className="text-lg text-muted-foreground">
                   Получите мгновенный доступ ко всем материалам курса
                 </p>
-                <form className="space-y-4">
-                  <Input placeholder="Ваше имя" size={50} />
-                  <Input type="email" placeholder="Email" />
-                  <Button size="lg" className="w-full">
-                    Получить курс бесплатно
-                  </Button>
-                </form>
+                {isSubmitted ? (
+                  <div className="bg-primary/10 p-6 rounded-xl">
+                    <Icon name="CheckCircle" size={48} className="text-primary mx-auto mb-3" />
+                    <p className="text-lg font-semibold">Спасибо за регистрацию!</p>
+                    <p className="text-muted-foreground mt-2">Мы отправили вам письмо с доступом к курсу</p>
+                  </div>
+                ) : (
+                  <form className="space-y-4" onSubmit={handleSubmit}>
+                    <Input 
+                      placeholder="Ваше имя" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
+                    <Input 
+                      type="email" 
+                      placeholder="Email" 
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
+                    <Button type="submit" size="lg" className="w-full">
+                      Получить курс бесплатно
+                    </Button>
+                  </form>
+                )}
               </div>
             </section>
 

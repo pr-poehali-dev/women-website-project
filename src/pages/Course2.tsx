@@ -8,6 +8,13 @@ import { useState } from "react";
 const Course2 = () => {
   const navigate = useNavigate();
   const [showStory, setShowStory] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-secondary/10 to-background">
@@ -190,27 +197,56 @@ const Course2 = () => {
               <div className="bg-secondary/30 p-8 rounded-3xl">
                 <div className="max-w-2xl mx-auto space-y-6">
                   <h2 className="text-3xl font-bold text-center">Записаться на урок</h2>
-                  <form className="space-y-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold">Ваше имя</label>
-                      <Input placeholder="Введите имя" />
+                  {isSubmitted ? (
+                    <div className="text-center space-y-4 py-8">
+                      <Icon name="CheckCircle" size={64} className="text-primary mx-auto" />
+                      <h4 className="text-2xl font-bold">Вы записаны!</h4>
+                      <p className="text-muted-foreground">
+                        Проверьте почту — мы отправили вам ссылку на урок
+                      </p>
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold">Email</label>
-                      <Input type="email" placeholder="your@email.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold">Телефон</label>
-                      <Input type="tel" placeholder="+7 (___) ___-__-__" />
-                    </div>
-                    <Button size="lg" className="w-full">
-                      Принять участие
-                      <Icon name="ArrowRight" size={20} className="ml-2" />
-                    </Button>
-                  </form>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Осталось мест: <strong>47 из 200</strong>
-                  </p>
+                  ) : (
+                    <>
+                      <form className="space-y-4" onSubmit={handleSubmit}>
+                        <div className="space-y-2">
+                          <label className="text-sm font-semibold">Ваше имя</label>
+                          <Input 
+                            placeholder="Введите имя" 
+                            value={formData.name}
+                            onChange={(e) => setFormData({...formData, name: e.target.value})}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-semibold">Email</label>
+                          <Input 
+                            type="email" 
+                            placeholder="your@email.com" 
+                            value={formData.email}
+                            onChange={(e) => setFormData({...formData, email: e.target.value})}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-semibold">Телефон</label>
+                          <Input 
+                            type="tel" 
+                            placeholder="+7 (___) ___-__-__" 
+                            value={formData.phone}
+                            onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                            required
+                          />
+                        </div>
+                        <Button type="submit" size="lg" className="w-full">
+                          Принять участие
+                          <Icon name="ArrowRight" size={20} className="ml-2" />
+                        </Button>
+                      </form>
+                      <p className="text-xs text-muted-foreground text-center">
+                        Осталось мест: <strong>47 из 200</strong>
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

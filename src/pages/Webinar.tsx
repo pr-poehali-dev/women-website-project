@@ -9,10 +9,17 @@ const Webinar = () => {
   const navigate = useNavigate();
   const [selectedTime, setSelectedTime] = useState("");
   const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleTimeSelect = (time: string) => {
     setSelectedTime(time);
     setShowForm(true);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
   };
 
   return (
@@ -96,25 +103,55 @@ const Webinar = () => {
                     <p className="text-muted-foreground">Время: {selectedTime} МСК</p>
                   </div>
 
-                  <form className="space-y-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold">Ваше имя</label>
-                      <Input placeholder="Введите имя" />
+                  {isSubmitted ? (
+                    <div className="text-center space-y-4">
+                      <Icon name="CheckCircle" size={64} className="text-primary mx-auto" />
+                      <h4 className="text-xl font-bold">Вы зарегистрированы!</h4>
+                      <p className="text-muted-foreground">
+                        Мы отправили вам письмо с ссылкой на вебинар
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Время: {selectedTime} МСК
+                      </p>
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold">Email</label>
-                      <Input type="email" placeholder="your@email.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-semibold">Телефон</label>
-                      <Input type="tel" placeholder="+7 (___) ___-__-__" />
-                    </div>
+                  ) : (
+                    <form className="space-y-4" onSubmit={handleSubmit}>
+                      <div className="space-y-2">
+                        <label className="text-sm font-semibold">Ваше имя</label>
+                        <Input 
+                          placeholder="Введите имя" 
+                          value={formData.name}
+                          onChange={(e) => setFormData({...formData, name: e.target.value})}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-semibold">Email</label>
+                        <Input 
+                          type="email" 
+                          placeholder="your@email.com" 
+                          value={formData.email}
+                          onChange={(e) => setFormData({...formData, email: e.target.value})}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-semibold">Телефон</label>
+                        <Input 
+                          type="tel" 
+                          placeholder="+7 (___) ___-__-__" 
+                          value={formData.phone}
+                          onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                          required
+                        />
+                      </div>
 
-                    <Button className="w-full" size="lg">
-                      Зарегистрироваться
-                      <Icon name="ArrowRight" size={20} className="ml-2" />
-                    </Button>
-                  </form>
+                      <Button type="submit" className="w-full" size="lg">
+                        Зарегистрироваться
+                        <Icon name="ArrowRight" size={20} className="ml-2" />
+                      </Button>
+                    </form>
+                  )}
 
                   <p className="text-xs text-muted-foreground text-center">
                     Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
