@@ -3,10 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import Layout from "@/components/Layout";
 
 const Webinar = () => {
-  const navigate = useNavigate();
   const [selectedTime, setSelectedTime] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
@@ -23,11 +22,8 @@ const Webinar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <nav className="py-4 px-4 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <button onClick={() => navigate("/")} className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Private College" className="h-10" />
+    <Layout>
+      <div className="bg-gradient-to-b from-background to-secondary/20">
           </button>
         </div>
       </nav>
