@@ -152,7 +152,7 @@ const Index = () => {
                       window.open(course.link, '_blank');
                     }}
                   >
-                    Записаться <Icon name="ArrowRight" size={20} className="ml-2" />
+                    Ознакомиться <Icon name="ArrowRight" size={20} className="ml-2" />
                   </Button>
                 </CardContent>
               </Card>
