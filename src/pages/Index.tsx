@@ -170,33 +170,40 @@ const Index = () => {
               {
                 name: "Анна, 32 года",
                 text: "После курса я поняла, как важно быть собой. Муж снова дарит цветы и говорит комплименты, как в начале отношений. Спасибо за эти знания!",
-                rating: 5
+                rating: 5,
+                photo: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/ed3266a7-4367-458e-a7b3-7ca38eb79c8a.jpg"
               },
               {
                 name: "Мария, 28 лет",
                 text: "Мы были на грани расставания. Курс помог мне увидеть свои ошибки и научил правильно выстраивать общение. Сейчас мы счастливы как никогда!",
-                rating: 5
+                rating: 5,
+                photo: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/ee96f22a-3295-4812-9ec2-e2667d825139.jpg"
               },
               {
                 name: "Елена, 35 лет",
                 text: "Думала, что страсть уходит со временем. Оказалось, можно всё вернуть! Теперь я чувствую себя желанной каждый день. Рекомендую всем!",
-                rating: 5
+                rating: 5,
+                photo: "https://cdn.poehali.dev/projects/e47ea841-df61-4199-aa19-4928f91f098a/files/b56e58e2-02a4-4187-9013-687dcb1c7ac5.jpg"
               }
             ].map((review, idx) => (
               <Card key={idx} className="hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={16} className="fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                      <Icon name="User" size={20} className="text-red-600" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <img 
+                      src={review.photo} 
+                      alt={review.name}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="font-semibold text-base mb-1">{review.name}</div>
+                      <div className="flex gap-1">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Icon key={i} name="Star" size={14} className="fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
                     </div>
-                    <div className="font-semibold text-sm">{review.name}</div>
                   </div>
+                  <p className="text-gray-700 italic leading-relaxed">"{review.text}"</p>
                 </CardContent>
               </Card>
             ))}
