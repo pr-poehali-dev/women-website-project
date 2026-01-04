@@ -85,7 +85,7 @@ const Index = () => {
             Онлайн-школа для женщин
           </div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-2xl">Курсы любовного мастерства</h1>
-          <p className="text-xl text-white mb-8 font-medium drop-shadow-lg">Станьте единственной и самой желанной для своего мужчины</p>
+          <p className="text-xl mb-8 font-medium drop-shadow-lg text-red-500">Станьте единственной и самой желанной для своего мужчины</p>
         </div>
       </section>
 
