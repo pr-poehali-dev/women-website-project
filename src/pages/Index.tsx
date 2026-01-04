@@ -161,6 +161,96 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 bg-gradient-to-b from-white to-red-50/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Отзывы наших учениц</h2>
+          <p className="text-center text-gray-600 mb-12">Истории женщин, которые изменили свои отношения</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Анна, 32 года",
+                text: "После курса я поняла, как важно быть собой. Муж снова дарит цветы и говорит комплименты, как в начале отношений. Спасибо за эти знания!",
+                rating: 5
+              },
+              {
+                name: "Мария, 28 лет",
+                text: "Мы были на грани расставания. Курс помог мне увидеть свои ошибки и научил правильно выстраивать общение. Сейчас мы счастливы как никогда!",
+                rating: 5
+              },
+              {
+                name: "Елена, 35 лет",
+                text: "Думала, что страсть уходит со временем. Оказалось, можно всё вернуть! Теперь я чувствую себя желанной каждый день. Рекомендую всем!",
+                rating: 5
+              }
+            ].map((review, idx) => (
+              <Card key={idx} className="hover:shadow-xl transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                      <Icon name="User" size={20} className="text-red-600" />
+                    </div>
+                    <div className="font-semibold text-sm">{review.name}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Частые вопросы</h2>
+          <p className="text-center text-gray-600 mb-12">Ответы на вопросы, которые вас волнуют</p>
+          <div className="space-y-4">
+            {[
+              {
+                question: "Это только для тех, у кого проблемы в отношениях?",
+                answer: "Нет, наши курсы подходят всем женщинам — и тем, кто хочет улучшить уже хорошие отношения, и тем, кто столкнулся с трудностями. Знания помогут вам стать увереннее и счастливее в любой ситуации."
+              },
+              {
+                question: "Сколько времени нужно уделять курсу?",
+                answer: "Минимум времени — максимум результата. Эфиры и вебинары длятся 1-2 часа, а знания вы сможете применять сразу. Всё построено так, чтобы вписаться в ваш график."
+              },
+              {
+                question: "Гарантируете ли вы результат?",
+                answer: "Мы даем проверенные инструменты и техники, которые работают у тысяч женщин. Результат зависит от вашего желания применять знания. Если вы готовы меняться — результат будет обязательно."
+              },
+              {
+                question: "Это точно бесплатно?",
+                answer: "Да, вводные эфиры и вебинары полностью бесплатные. Это наш подарок вам, чтобы вы могли познакомиться с подходом школы и получить первые результаты."
+              },
+              {
+                question: "Муж не узнает, что я прохожу курс?",
+                answer: "Всё полностью конфиденциально. Вы занимаетесь онлайн в удобное время, никто не узнает. А результаты он точно заметит — в лучшую сторону!"
+              }
+            ].map((faq, idx) => (
+              <Card key={idx} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                        <Icon name="HelpCircle" size={20} className="text-red-600" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">{faq.question}</h3>
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer className="py-12 px-4 bg-gray-900 text-white">
         <div className="container mx-auto text-center">
           <div className="font-bold text-lg mb-2">PRIVATE COLLEGE</div>
