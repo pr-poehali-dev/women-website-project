@@ -64,7 +64,17 @@ const Index = () => {
             </div>
             <div className="hidden md:flex items-center gap-6">
               <a href="#courses" className="text-sm hover:text-red-600 transition-colors">Курсы</a>
-              <Button size="sm" className="bg-red-600 hover:bg-red-700">Консультация</Button>
+              <Button 
+                size="sm" 
+                className="bg-red-600 hover:bg-red-700"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).ym) {
+                    (window as any).ym(106161694, 'reachGoal', 'consultation_click');
+                  }
+                }}
+              >
+                Консультация
+              </Button>
             </div>
           </div>
         </div>
@@ -149,6 +159,12 @@ const Index = () => {
                     className="w-full bg-gradient-to-r from-red-700 to-red-600 hover:from-red-800 hover:to-red-700"
                     onClick={(e) => {
                       e.stopPropagation();
+                      if (typeof window !== 'undefined' && (window as any).ym) {
+                        (window as any).ym(106161694, 'reachGoal', 'course_click', {
+                          course_id: course.id,
+                          course_title: course.title
+                        });
+                      }
                       window.open(course.link, '_blank');
                     }}
                   >
