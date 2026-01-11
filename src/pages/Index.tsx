@@ -94,8 +94,8 @@ const Index = () => {
             <Icon name="Heart" size={16} />
             Онлайн-школа для женщин
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-2xl">Курсы любовного мастерства</h1>
-          <p className="text-xl mb-8 font-medium drop-shadow-lg text-red-500">Станьте единственной и самой желанной для своего мужчины</p>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-2xl">Верните страсть и внимание в отношения</h1>
+          <p className="text-xl mb-8 font-medium drop-shadow-lg text-red-500">Станьте той, о которой он не перестанет думать — каждый день</p>
         </div>
       </section>
 
@@ -229,8 +229,8 @@ const Index = () => {
 
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4">Частые вопросы</h2>
-          <p className="text-center text-gray-600 mb-12">Ответы на вопросы, которые вас волнуют</p>
+          <h2 className="text-4xl font-bold text-center mb-4">У вас наверняка есть вопросы</h2>
+          <p className="text-center text-gray-600 mb-12">Мы ответили на самые важные — честно и по делу</p>
           <div className="space-y-4">
             {[
               {
