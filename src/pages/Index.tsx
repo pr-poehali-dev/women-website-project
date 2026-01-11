@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,6 +6,7 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const navigate = useNavigate();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   // Функция для добавления UTM-меток к ссылке
   const addUTMParams = (baseUrl: string, courseId: number, courseTitle: string) => {
@@ -88,7 +90,36 @@ const Index = () => {
                 Консультация
               </Button>
             </div>
+            <button 
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
           </div>
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-3">
+              <a 
+                href="#courses" 
+                className="block text-center py-2 hover:text-red-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Курсы
+              </a>
+              <Button 
+                className="w-full bg-red-600 hover:bg-red-700"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).ym) {
+                    (window as any).ym(106161694, 'reachGoal', 'consultation_click');
+                  }
+                  window.open('https://ihclick.ru/?p=321031&o=321029&idp=314945&erid=2VtzqvJocLS', '_blank');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Консультация
+              </Button>
+            </div>
+          )}
         </div>
       </nav>
 
