@@ -6,6 +6,17 @@ import Icon from "@/components/ui/icon";
 const Index = () => {
   const navigate = useNavigate();
 
+  // Функция для добавления UTM-меток к ссылке
+  const addUTMParams = (baseUrl: string, courseId: number, courseTitle: string) => {
+    const url = new URL(baseUrl);
+    // Добавляем дополнительные UTM-метки для отслеживания источника клика
+    url.searchParams.append('utm_source', 'landing_page');
+    url.searchParams.append('utm_medium', 'course_card');
+    url.searchParams.append('utm_campaign', `course_${courseId}`);
+    url.searchParams.append('utm_content', courseTitle.toLowerCase().replace(/[^a-zа-я0-9]/g, '_'));
+    return url.toString();
+  };
+
   const courses = [
     {
       id: 1,
@@ -165,7 +176,9 @@ const Index = () => {
                           course_title: course.title
                         });
                       }
-                      window.open(course.link, '_blank');
+                      // Добавляем UTM-метки к ссылке перед открытием
+                      const urlWithUTM = addUTMParams(course.link, course.id, course.title);
+                      window.open(urlWithUTM, '_blank');
                     }}
                   >
                     Ознакомиться <Icon name="ArrowRight" size={20} className="ml-2" />
