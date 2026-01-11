@@ -82,6 +82,7 @@ const Index = () => {
                   if (typeof window !== 'undefined' && (window as any).ym) {
                     (window as any).ym(106161694, 'reachGoal', 'consultation_click');
                   }
+                  window.open('https://ihclick.ru/?p=321031&o=321029&idp=314945&erid=2VtzqvJocLS', '_blank');
                 }}
               >
                 Консультация
