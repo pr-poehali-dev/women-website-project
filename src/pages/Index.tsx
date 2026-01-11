@@ -272,7 +272,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      <section id="faq" className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-4">У вас наверняка есть вопросы</h2>
           <p className="text-center text-gray-600 mb-12">Мы ответили на самые важные — честно и по делу</p>
@@ -319,7 +319,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-b from-red-50/30 to-white">
+      <section id="consultation" className="py-16 px-4 bg-gradient-to-b from-red-50/30 to-white">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold mb-4">Остались вопросы?</h2>
           <p className="text-gray-600 text-lg mb-8">
