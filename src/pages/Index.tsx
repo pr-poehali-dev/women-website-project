@@ -288,6 +288,28 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 bg-gradient-to-b from-red-50/30 to-white">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-bold mb-4">Остались вопросы?</h2>
+          <p className="text-gray-600 text-lg mb-8">
+            Запишитесь на бесплатную консультацию с нашим экспертом. 
+            Поможем выбрать подходящий курс и ответим на все вопросы
+          </p>
+          <Button 
+            size="lg" 
+            className="bg-red-600 hover:bg-red-700 text-lg px-8 py-6"
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).ym) {
+                (window as any).ym(106161694, 'reachGoal', 'consultation_click');
+              }
+              window.open('https://ihclick.ru/?p=321031&o=321029&idp=314945&erid=2VtzqvJocLS', '_blank');
+            }}
+          >
+            Получить консультацию <Icon name="ArrowRight" size={24} className="ml-2" />
+          </Button>
+        </div>
+      </section>
+
       <footer className="py-12 px-4 bg-gray-900 text-white">
         <div className="container mx-auto text-center">
           <div className="font-bold text-lg mb-2">PRIVATE COLLEGE</div>
